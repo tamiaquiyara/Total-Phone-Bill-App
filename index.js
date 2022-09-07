@@ -29,9 +29,9 @@ app.get("/calc_bill", function (req, res) {
     let usage = req.body.string;
     let totalBill
 
-    totalBill = phonebill.total(usage);
+    // totalBill = phonebill.total(usage);
     res.render("index", {
-        total: totalBill
+        // total: totalBill
     });
 });
 

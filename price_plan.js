@@ -16,27 +16,27 @@ module.exports = function PhoneBill() {
     }
 
 
-    function total(usage) {
+    // function total(usage) {
 
-        var usageString = usage.split(', ');
-        var call = 0;
-        var sms = 0;
-        for (var i = 0; i < usageString.length; i++) {
-            var bill = usageString[i];
-            if (bill === 'call') {
-                call += 2.75;
-            } else {
-                sms += 0.65;
-            }
-        }
-        var totalBill = call + sms;
-        return 'R' + totalBill.toFixed(2);
+    //     var usageString = usage.split(', ');
+    //     var call = 0;
+    //     var sms = 0;
+    //     for (var i = 0; i < usageString.length; i++) {
+    //         var bill = usageString[i];
+    //         if (bill === 'call') {
+    //             call += 2.75;
+    //         } else {
+    //             sms += 0.65;
+    //         }
+    //     }
+    //     var totalBill = call + sms;
+    //     return 'R' + totalBill.toFixed(2);
 
-    }
+    // }
 
     return {
         storingUsernames,
         getUsers,
-        total
+        // total
     }
 };
