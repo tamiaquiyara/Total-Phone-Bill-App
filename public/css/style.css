@@ -4,11 +4,23 @@ body{
     color: black   ;
 }
 
-h1{
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 2em;
+    color: palevioletred;
+    /* text-align: center; */
+}
+
+/* h2{
     margin-top: 2em;
     color: palevioletred;
     text-align: center;
 }
+
+h3{
+    margin-top: 2em;
+    color: palevioletred;
+    text-align: center;
+} */
 
 a {
     padding: 0.4em;

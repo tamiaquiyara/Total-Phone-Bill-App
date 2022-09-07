@@ -5,21 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/skeleton.css">
+    <title></title>
     <title></title>
 </head>
 <body>
-    <h1>Phone Bill Widget</h1>
+    <h3>Phone Bill Widget</h3>
     <form action="/" method="get">
-    <h2>Calculate total phone bill for user</h2>
+    <h4>Calculate total phone bill for user</h4>
     <div class="totalBill">
-        <h2>Username:</h2>
+        <h5>Username:</h5>
 
-                <input type="text" name="text" class="nameEntered" value="" placeholder="Please Enter Name Here">
+                <input type="text" name="text" class="userName" value="" placeholder="Please Enter Username Here">
 
-                <h2>Usage String:</h2>
+                <h5>Usage String:</h5>
 
-                <input type="text" name="text" class="nameEntered" value="" placeholder="Please Enter Name Here">
+                <input type="text" name="text" class="usage" value="" placeholder="Please Enter Usage String">
+    <button class="calculateTotal" type="submit" name="button">Calculate total phone bill</button>
+    <h5>Phone Bill Total</h5>
+    <table>
+              <tr>
+                <td>Phone Bill Total</td>
+                <td>
+                  R<span class="billTotal">0.00</span>
+                </td>
+                
+              </tr>
+              </table>
     </div>
+
     </form>
 </body>
 </html>

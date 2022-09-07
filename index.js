@@ -28,7 +28,7 @@ app.post("/calc_bill", function (req, res) {
 
 
 app.get("/price_plan", function (req, res) {
-    res.redirect("/");
+    res.render("priceplan");
 });
 
 
