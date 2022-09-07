@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/style.css">
-    <link rel="stylesheet" href="/public/css/skeleton.css">
-    <title></title>
-    <title></title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="/public/css/skeleton.css">
+  <title></title>
+  <title></title>
 </head>
+
 <body>
-    <h3>Phone Bill Widget</h3>
-    <form action="/" method="get">
-    <h4>Calculate total phone bill for user</h4>
-    <div class="totalBill">
-        <h5>Username:</h5>
-
-                <input type="text" name="text" class="userName" value="" placeholder="Please Enter Username Here">
-
-                <h5>Usage String:</h5>
-
-                <input type="text" name="text" class="usage" value="" placeholder="Please Enter Usage String">
-    <button class="calculateTotal" type="submit" name="button">Calculate total phone bill</button>
-    <h5>Phone Bill Total</h5>
-    <table>
-              <tr>
-                <td>Phone Bill Total</td>
-                <td>
-                  R<span class="billTotal">0.00</span>
-                </td>
-                
-              </tr>
-              </table>
+  <h3>Phone Bill Widget</h3>
+  <form action="/calc_bill" method="get">
+    <div class="home">
+      <a href="/">Home</a>
+    </div>
+    <div class="plan">
+      <a href="/price_plan">Price Plan</a>
+    </div>
+    <div class="link">
+      <a href="/price_plan/:id">Link Users</a>
     </div>
 
-    </form>
+    <h4>Calculate total phone bill for user</h4>
+    <div class="totalBill">
+      <h5>Username:</h5>
+
+      <input type="text" name="userName" class="userName" value="" placeholder="Please Enter Username Here">
+
+      <h5>Usage String:</h5>
+
+      <input type="text" name="string" class="usage" value="" placeholder="Please Enter Usage String">
+      <button class="calculateTotal" type="submit" name="button">Calculate total phone bill</button>
+      <h5>Phone Bill Total</h5>
+      <table>
+        <tr>
+          <td>Phone Bill Total</td>
+          <td>
+            R<span class="billTotal">{{total}}</span>
+          </td>
+
+        </tr>
+      </table>
+    </div>
+
+  </form>
 </body>
+
 </html>

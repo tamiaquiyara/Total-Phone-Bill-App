@@ -3,10 +3,11 @@ let express = require('express');
 // const session = require('express-session');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
-// const Greeting = require('./greet');
+const PhoneBill = require('./price_plan');
 
 
 const app = express();
+const phonebill = PhoneBill();
 
 app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
@@ -19,11 +20,19 @@ app.use(bodyParser.json())
 
 app.get("/", function (req, res) {
     res.render("index");
+
 });
 
 
-app.post("/calc_bill", function (req, res) {
-    res.redirect("/");
+app.get("/calc_bill", function (req, res) {
+    // let user = req.body.userName;
+    let usage = req.body.string;
+    let totalBill
+
+    totalBill = phonebill.total(usage);
+    res.render("index", {
+        total: totalBill
+    });
 });
 
 
@@ -33,12 +42,16 @@ app.get("/price_plan", function (req, res) {
 
 
 app.get("/price_plan/:id", function (req, res) {
-    res.redirect("/");
+    console.log(phonebill.getUsers());
+    let usersLinked = phonebill.getUsers()
+    res.render("users",
+        usersLinked
+    );
 });
 
 
 
-app.get("/user", function (req, res) {
+app.get("/link_user", function (req, res) {
     res.redirect("/");
 });
 
